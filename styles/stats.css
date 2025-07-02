@@ -31,10 +31,10 @@ body {
   z-index: 3;
   padding: 40px;
   text-align: center;
-  margin-top: 360px; /* 👈 lowered position */
+  margin-top: 360px; /* default for desktop */
 }
 
-/* Title (Removed from HTML, but kept here in case reused) */
+/* Title (Removed from HTML) */
 h1 {
   display: none;
 }
@@ -47,7 +47,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Avatar Image (Removed) */
+/* Avatar (Removed) */
 .avatar {
   display: none;
 }
@@ -111,14 +111,15 @@ h1 {
   transform: scale(1.05);
   background-color: #0d7377;
 }
+
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   .stats-container {
-    margin-top: 680px !important; /* Force override on mobile */
+    margin-top: 680px !important; /* ⬇️ Force lower placement */
   }
 
   .button-section {
-    margin-top: 100px !important;
+    margin-top: 120px !important;
     flex-direction: column;
     align-items: center;
   }
@@ -129,4 +130,3 @@ h1 {
     font-size: 1.1rem;
   }
 }
-
