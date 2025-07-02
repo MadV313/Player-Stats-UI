@@ -6,14 +6,14 @@
   <link rel="stylesheet" href="styles/stats.css" />
 </head>
 <body>
-  <!-- ✅ Force background image with image fallback for bug testing -->
+  <!-- ✅ Force background image with fallback -->
   <img src="images/backgrounds/background_image.png" alt="Background" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:0; object-fit:cover;" />
 
   <!-- ❄️ Snowfall Effect -->
   <div class="snowfall"></div>
 
   <!-- Main Stats Container -->
-  <div class="stats-container" style="margin-top: 120px;">
+  <div class="stats-container">
     <!-- Removed: <h1>PLAYER STATS</h1> -->
 
     <!-- Profile Section -->
@@ -42,15 +42,12 @@
           <span id="win-loss">25 / 18</span>
         </div>
 
-        <div class="stat-row">
-          <span class="label">Duels Won</span>
-          <span id="duels-won">25</span>
-        </div>
+        <!-- Removed Duels Won -->
       </div>
     </div>
 
     <!-- Buttons -->
-    <div class="button-section" style="margin-top: 60px;">
+    <div class="button-section">
       <a href="#" class="btn">LEADERBOARD</a>
       <a href="https://madv313.github.io/HUB-UI/" class="btn">RETURN TO HUB</a>
     </div>
