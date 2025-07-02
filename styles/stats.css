@@ -115,7 +115,7 @@ h1 {
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   .stats-container {
-    margin-top: 440px !important; /* Lower just enough to sit under the profile pic */
+    margin-top: 40px !important; /* Lower just enough to sit under the profile pic */
     padding: 20px;
     transform: scale(0.9); /* ⬇️ Shrinks everything slightly */
   }
