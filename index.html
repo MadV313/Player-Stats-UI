@@ -9,43 +9,45 @@
   <!-- ❄️ Snowfall Effect -->
   <div class="snowfall"></div>
 
-  <!-- Main Container -->
+  <!-- Main Stats Container -->
   <div class="stats-container">
-    <h1 class="title">PLAYER STATS</h1>
+    <h1>PLAYER STATS</h1>
 
-    <!-- Avatar + Info Row -->
-    <div class="avatar-info">
+    <!-- Profile Section -->
+    <div class="profile-section">
       <img src="images/avatars/default_survivor.png" alt="Avatar" class="avatar" />
-      <div class="info-text">
-        <div class="rank">Survivor</div>
-        <div class="label">CARDS COLLECTED</div>
-        <div class="stat" id="cards-collected">150</div>
+      <div class="player-info">
+        <h2>Survivor</h2>
+
+        <div class="stat-row">
+          <span class="label">Coins</span>
+          <span id="coins">325</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="label">Cards Unlocked</span>
+          <span id="unlocked-cards">98 / 127</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="label">Total Cards Owned</span>
+          <span id="total-cards">211 / 250</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="label">W/L Ratio</span>
+          <span id="win-loss">25 / 18</span>
+        </div>
+
+        <div class="stat-row">
+          <span class="label">Duels Won</span>
+          <span id="duels-won">25</span>
+        </div>
       </div>
     </div>
 
-    <!-- Duels Won -->
-    <div class="duels-won">
-      <div class="label">DUELS WON</div>
-      <div class="stat" id="duels-won">25</div>
-    </div>
-
-    <!-- Additional Stats -->
-    <div class="extra-stats">
-      <div class="label">COINS</div>
-      <div class="stat" id="coins">325</div>
-
-      <div class="label">CARDS UNLOCKED</div>
-      <div class="stat" id="unlocked-cards">98 / 127</div>
-
-      <div class="label">TOTAL CARDS OWNED</div>
-      <div class="stat" id="total-cards">211 / 250</div>
-
-      <div class="label">W/L RATIO</div>
-      <div class="stat" id="win-loss">25 / 18</div>
-    </div>
-
     <!-- Buttons -->
-    <div class="buttons">
+    <div class="button-section">
       <a href="#" class="btn">LEADERBOARD</a>
       <a href="https://madv313.github.io/HUB-UI/" class="btn">RETURN TO HUB</a>
     </div>
