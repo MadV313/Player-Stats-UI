@@ -6,11 +6,14 @@ body {
   font-family: 'Arial', sans-serif;
   background: url('../images/backgrounds/background_image.PNG') no-repeat center center fixed;
   background-size: cover;
+  background-color: #000;
   color: #f0f0f0;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
-/* Snowfall overlay */
+/* Snowfall Overlay */
 .snowfall {
   position: fixed;
   top: 0;
@@ -20,9 +23,11 @@ body {
   background: url('../images/effects/snowfall.gif') center center / cover no-repeat;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.5;
+  opacity: 0.25;               /* More transparent for natural look */
+  mix-blend-mode: lighten;     /* Helps snow blend with background */
 }
 
+/* Stats Container */
 .stats-container {
   position: relative;
   z-index: 3;
@@ -30,6 +35,7 @@ body {
   text-align: center;
 }
 
+/* Title */
 h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
@@ -37,6 +43,7 @@ h1 {
   text-shadow: 2px 2px #000;
 }
 
+/* Profile Section */
 .profile-section {
   display: flex;
   flex-direction: column;
@@ -44,6 +51,7 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Avatar Image */
 .avatar {
   width: 160px;
   height: 160px;
@@ -52,6 +60,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Info Box */
 .player-info {
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 30px;
@@ -61,6 +70,7 @@ h1 {
   width: 100%;
 }
 
+/* Player Name */
 .player-info h2 {
   text-align: center;
   font-size: 2rem;
@@ -68,6 +78,7 @@ h1 {
   color: #00ffff;
 }
 
+/* Stat Row Format */
 .stat-row {
   display: flex;
   justify-content: space-between;
@@ -75,11 +86,13 @@ h1 {
   margin: 12px 0;
 }
 
+/* Labels */
 .label {
   font-weight: bold;
   color: #fff;
 }
 
+/* Buttons */
 .button-section {
   display: flex;
   justify-content: center;
