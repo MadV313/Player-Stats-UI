@@ -115,7 +115,7 @@ h1 {
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   .stats-container {
-    margin-top: 10px !important; /* ⬇️ Force lower placement */
+    margin-top: -220px !important; /* ⬇️ Force lower placement */
   }
 
   .button-section {
