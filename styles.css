@@ -1,0 +1,78 @@
+/* Container Layout */
+.player-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.player-stats h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+  text-shadow: 0 2px 4px #000;
+}
+
+/* Avatar */
+.player-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Stats Block */
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.stat-value {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Buttons */
+.stats-button {
+  margin-top: 18px;
+  width: 300px;
+  padding: 14px 0;
+  background: #264248;
+  color: #d0d0d0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.stats-button:hover {
+  background: #2f5a61;
+  color: white;
+  transform: scale(1.03);
+}
+
+.return-to-hub {
+  margin-top: 40px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #1a1a1a;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 2px solid #444;
+  transition: background 0.2s ease;
+}
+
+.return-to-hub:hover {
+  background: #333;
+}
