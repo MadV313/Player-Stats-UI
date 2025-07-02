@@ -1,111 +1,57 @@
-# CSS for stats.css
-stats_css = """
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background: url('../images/backgrounds/background_image.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #f0f0f0;
-  overflow: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SV13 Player Stats</title>
+  <link rel="stylesheet" href="styles/stats.css" />
+</head>
+<body>
+  <!-- ❄️ Snowfall Effect -->
+  <div class="snowfall"></div>
 
-/* Snowfall overlay */
-.snowfall {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../images/effects/snowfall.gif') center center / cover no-repeat;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.5;
-}
+  <!-- Main Container -->
+  <div class="stats-container">
+    <h1 class="title">PLAYER STATS</h1>
 
-.stats-container {
-  position: relative;
-  z-index: 3;
-  padding: 40px;
-  text-align: center;
-}
+    <!-- Avatar + Info Row -->
+    <div class="avatar-info">
+      <img src="images/avatars/default_survivor.png" alt="Avatar" class="avatar" />
+      <div class="info-text">
+        <div class="rank">Survivor</div>
+        <div class="label">CARDS COLLECTED</div>
+        <div class="stat" id="cards-collected">150</div>
+      </div>
+    </div>
 
-h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  color: #dff6ff;
-  text-shadow: 2px 2px #000;
-}
+    <!-- Duels Won -->
+    <div class="duels-won">
+      <div class="label">DUELS WON</div>
+      <div class="stat" id="duels-won">25</div>
+    </div>
 
-.profile-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
+    <!-- Additional Stats -->
+    <div class="extra-stats">
+      <div class="label">COINS</div>
+      <div class="stat" id="coins">325</div>
 
-.avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid #ccc;
-  margin-bottom: 20px;
-}
+      <div class="label">CARDS UNLOCKED</div>
+      <div class="stat" id="unlocked-cards">98 / 127</div>
 
-.player-info {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 30px;
-  border-radius: 10px;
-  text-align: left;
-  max-width: 360px;
-  width: 100%;
-}
+      <div class="label">TOTAL CARDS OWNED</div>
+      <div class="stat" id="total-cards">211 / 250</div>
 
-.player-info h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00ffff;
-}
+      <div class="label">W/L RATIO</div>
+      <div class="stat" id="win-loss">25 / 18</div>
+    </div>
 
-.stat-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.25rem;
-  margin: 12px 0;
-}
+    <!-- Buttons -->
+    <div class="buttons">
+      <a href="#" class="btn">LEADERBOARD</a>
+      <a href="https://madv313.github.io/HUB-UI/" class="btn">RETURN TO HUB</a>
+    </div>
+  </div>
 
-.label {
-  font-weight: bold;
-  color: #fff;
-}
-
-.button-section {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-button {
-  padding: 14px 36px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #054b4f;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00ffff;
-  transition: transform 0.2s ease;
-}
-
-button:hover {
-  transform: scale(1.05);
-  background-color: #0d7377;
-}
-"""
-
-# Save to stats.css
-css_path = Path("/mnt/data/sv13-player-stats-ui/styles/stats.css")
-css_path.write_text(stats_css.strip(), encoding="utf-8")
+  <!-- Script -->
+  <script src="scripts/stats.js"></script>
+</body>
+</html>
