@@ -1,78 +1,22 @@
-/* Container Layout */
-.player-stats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 20px;
-  color: #e0e0e0;
-  font-family: 'Arial', sans-serif;
-}
+# JavaScript logic for loading and injecting player data
+stats_js = """
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("data/mock_player_data.json");
+    const data = await response.json();
 
-/* Title */
-.player-stats h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #1f1f1f;
-  text-shadow: 0 2px 4px #000;
-}
+    document.getElementById("player-name").textContent = data.name || "Survivor";
+    document.getElementById("player-coins").textContent = data.coins ?? 0;
+    document.getElementById("cards-collected").textContent = `${data.cardsCollected} / 127`;
+    document.getElementById("cards-owned").textContent = `${data.cardsOwned} / 250`;
+    document.getElementById("win-loss").textContent = `${data.duelsWon} / ${data.duelsLost}`;
 
-/* Avatar */
-.player-avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-}
+  } catch (err) {
+    console.error("Failed to load player data:", err);
+  }
+});
+"""
 
-/* Stats Block */
-.stat-label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #ccc;
-}
-
-.stat-value {
-  font-size: 2rem;
-  color: #fff;
-}
-
-/* Buttons */
-.stats-button {
-  margin-top: 18px;
-  width: 300px;
-  padding: 14px 0;
-  background: #264248;
-  color: #d0d0d0;
-  font-size: 1.4rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.stats-button:hover {
-  background: #2f5a61;
-  color: white;
-  transform: scale(1.03);
-}
-
-.return-to-hub {
-  margin-top: 40px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #ffffff;
-  background: #1a1a1a;
-  padding: 12px 24px;
-  border-radius: 6px;
-  border: 2px solid #444;
-  transition: background 0.2s ease;
-}
-
-.return-to-hub:hover {
-  background: #333;
-}
+# Save to stats.js
+js_path = Path("/mnt/data/sv13-player-stats-ui/scripts/stats.js")
+js_path.write_text(stats_js.strip(), encoding="utf-8")
