@@ -114,18 +114,19 @@ h1 {
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   .stats-container {
-    margin-top: 680px; /* Lower it much further for small screens */
+    margin-top: 680px !important; /* Force override on mobile */
   }
 
   .button-section {
-    margin-top: 100px;
+    margin-top: 100px !important;
     flex-direction: column;
     align-items: center;
   }
 
   .btn {
-    width: 80%;
+    width: 80% !important;
     margin-bottom: 15px;
     font-size: 1.1rem;
   }
 }
+
