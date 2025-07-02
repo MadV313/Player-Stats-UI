@@ -1,22 +1,111 @@
-# JavaScript logic for loading and injecting player data
-stats_js = """
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const response = await fetch("data/mock_player_data.json");
-    const data = await response.json();
+# CSS for stats.css
+stats_css = """
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('../images/backgrounds/background_image.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+  overflow: hidden;
+}
 
-    document.getElementById("player-name").textContent = data.name || "Survivor";
-    document.getElementById("player-coins").textContent = data.coins ?? 0;
-    document.getElementById("cards-collected").textContent = `${data.cardsCollected} / 127`;
-    document.getElementById("cards-owned").textContent = `${data.cardsOwned} / 250`;
-    document.getElementById("win-loss").textContent = `${data.duelsWon} / ${data.duelsLost}`;
+/* Snowfall overlay */
+.snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/effects/snowfall.gif') center center / cover no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.5;
+}
 
-  } catch (err) {
-    console.error("Failed to load player data:", err);
-  }
-});
+.stats-container {
+  position: relative;
+  z-index: 3;
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #dff6ff;
+  text-shadow: 2px 2px #000;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.player-info {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 360px;
+  width: 100%;
+}
+
+.player-info h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  margin: 12px 0;
+}
+
+.label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #054b4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0d7377;
+}
 """
 
-# Save to stats.js
-js_path = Path("/mnt/data/sv13-player-stats-ui/scripts/stats.js")
-js_path.write_text(stats_js.strip(), encoding="utf-8")
+# Save to stats.css
+css_path = Path("/mnt/data/sv13-player-stats-ui/styles/stats.css")
+css_path.write_text(stats_css.strip(), encoding="utf-8")
