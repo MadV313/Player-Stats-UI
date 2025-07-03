@@ -121,7 +121,7 @@ h1 {
   }
 
   .stats-container {
-    margin-top: 140px !important; /* 👈 Lower under the profile area */
+    margin-top: 240px !important; /* 👈 Lower under the profile area */
     padding: 20px;
     transform: scale(0.95); /* Optional shrink */
   }
