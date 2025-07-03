@@ -114,17 +114,17 @@ h1 {
 }
 
 /* === Responsive Mobile Adjustments === */
+/* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   html, body {
-    overflow: hidden !important;   /* ✅ Remove scroll again */
+    overflow: hidden !important;
     height: 100vh !important;
   }
 
   .stats-container {
-    margin-top: 360px !important;  /* ✅ Lower the container */
-    transform: scale(0.9);
+    transform: translateY(360px) scale(0.9); /* ✅ Move down reliably */
     padding: 20px;
-    padding-bottom: 0;             /* Remove extra bottom padding */
+    padding-bottom: 100px;
   }
 
   .player-info {
@@ -141,7 +141,7 @@ h1 {
   }
 
   .button-section {
-    margin-top: 80px !important;
+    margin-top: 40px !important;
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -154,3 +154,4 @@ h1 {
     margin-bottom: 8px;
   }
 }
+
