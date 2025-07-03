@@ -9,7 +9,7 @@ body {
   overflow: hidden;               /* ✅ No scrolling */
   position: relative;
   z-index: 1;
-  height: 100vh;              /* Keeps height reliable */
+  min-height: 100vh;              /* Keeps height reliable */
 }
 
 /* Snowfall Overlay */
@@ -113,27 +113,23 @@ h1 {
   background-color: #0d7377;
 }
 
+/* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   html, body {
-    overflow: hidden !important;
+    overflow: hidden !important;   /* ✅ Remove scroll again */
     height: 100vh !important;
-    margin: 0;
-    padding: 0;
   }
 
   .stats-container {
-    position: absolute;
-    top: 420px;              /* ✅ Exact placement under avatar */
-    left: 0;
-    right: 0;
+    margin-top: 390px !important;  /* ✅ Lower the container */
+    transform: scale(0.9);
     padding: 20px;
-    scale: 0.9;
+    padding-bottom: 0;             /* Remove extra bottom padding */
   }
 
   .player-info {
     max-width: 280px;
     padding: 16px 20px;
-    margin: 0 auto;
   }
 
   .player-info h2 {
@@ -158,5 +154,3 @@ h1 {
     margin-bottom: 8px;
   }
 }
-
-
