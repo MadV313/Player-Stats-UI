@@ -121,7 +121,7 @@ h1 {
 
   .stats-container {
     position: relative;
-    margin-top: 360px !important;   /* 👈 actually moves the container */
+    margin-top: 340px !important;   /* 👈 actually moves the container */
     padding: 20px;
     text-align: center;
   }
