@@ -120,12 +120,13 @@ h1 {
   }
 
   .stats-container {
-    position: relative;
-    margin-top: 340px !important;   /* 👈 actually moves the container */
-    padding: 20px;
-    text-align: center;
-    transform: scale(0.75)
-  }
+  position: relative;
+  margin-top: 340px !important;
+  padding: 20px;
+  text-align: center;
+  transform: scale(0.75);
+  transform-origin: top center;
+}
 
   .player-info {
     max-width: 280px;
