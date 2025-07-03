@@ -117,17 +117,23 @@ h1 {
   html, body {
     overflow: hidden !important;
     height: 100vh !important;
+    margin: 0;
+    padding: 0;
   }
 
   .stats-container {
-    transform: translateY(280px) scale(0.9); /* ✅ Move down reliably */
+    position: absolute;
+    top: 420px;              /* ✅ Exact placement under avatar */
+    left: 0;
+    right: 0;
     padding: 20px;
-    padding-bottom: 100px;
+    scale: 0.9;
   }
 
   .player-info {
     max-width: 280px;
     padding: 16px 20px;
+    margin: 0 auto;
   }
 
   .player-info h2 {
@@ -152,4 +158,5 @@ h1 {
     margin-bottom: 8px;
   }
 }
+
 
