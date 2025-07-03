@@ -121,7 +121,7 @@ h1 {
   }
 
   .stats-container {
-    margin-top: 380px !important;   /* ✅ Lower the full box under avatar cleanly */
+    margin-top: 420px !important;   /* ✅ Lower the full box under avatar cleanly */
     transform: scale(0.9);
     padding: 20px;
     padding-bottom: 100px; /* breathing room */
