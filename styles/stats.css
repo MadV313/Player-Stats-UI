@@ -123,8 +123,8 @@ h1 {
     position: relative;
     margin-top: 340px !important;   /* 👈 actually moves the container */
     padding: 20px;
-    transform: scale(0.75)
     text-align: center;
+    transform: scale(0.75)
   }
 
   .player-info {
