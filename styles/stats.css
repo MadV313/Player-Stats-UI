@@ -121,7 +121,7 @@ h1 {
   }
 
   .stats-container {
-    margin-top: 390px !important;  /* ✅ Lower the container */
+    margin-top: 350px !important;  /* ✅ Lower the container */
     transform: scale(0.9);
     padding: 20px;
     padding-bottom: 0;             /* Remove extra bottom padding */
