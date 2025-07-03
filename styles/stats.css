@@ -106,10 +106,10 @@ body {
   }
 
   .stats-container {
-    margin-top: 240px;
-    transform: scale(0.85);
-    transform-origin: top center;
-  }
+  margin-top: 320px;                /* ⬅️ Increased top margin */
+  transform: scale(0.9);            /* ⬅️ Slightly larger for readability */
+  transform-origin: top center;
+}
 
   .player-info {
     max-width: 280px;
