@@ -121,9 +121,9 @@ h1 {
   }
 
   .stats-container {
-    margin-top: 240px !important; /* 👈 Lower under the profile area */
+    margin-top: 340px !important; /* 👈 Lower under the profile area */
     padding: 20px;
-    transform: scale(0.95); /* Optional shrink */
+    transform: scale(0.9); /* Optional shrink */
   }
 
   .player-info {
