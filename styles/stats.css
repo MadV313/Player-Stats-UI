@@ -116,15 +116,14 @@ h1 {
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   html, body {
-    overflow: hidden !important;   /* ✅ Remove scroll again */
-    height: 100vh !important;
+    overflow-y: auto !important;
+    height: auto !important;
   }
 
   .stats-container {
-    margin-top: 390px !important;  /* ✅ Lower the container */
-    transform: scale(0.9);
+    margin-top: 140px !important; /* 👈 Lower under the profile area */
     padding: 20px;
-    padding-bottom: 0;             /* Remove extra bottom padding */
+    transform: scale(0.95); /* Optional shrink */
   }
 
   .player-info {
