@@ -115,20 +115,14 @@ h1 {
 
 @media screen and (max-width: 768px) {
   html, body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 100vh;
+    overflow-y: auto;
+    height: auto;
   }
 
   .stats-container {
-    position: absolute;
-    top: 340px; /* ✅ Replaces margin-top reliably */
-    left: 0;
-    right: 0;
-    transform: scale(0.85);        /* Shrinks entire container */
+    margin-top: 240px;
+    transform: scale(0.85);
     transform-origin: top center;
-    padding: 20px;
-    text-align: center;
   }
 
   .player-info {
@@ -158,5 +152,6 @@ h1 {
     margin-bottom: 8px;
   }
 }
+
 
 
