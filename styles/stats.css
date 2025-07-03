@@ -6,10 +6,10 @@ body {
   background-size: cover;
   background-color: #000;
   color: #f0f0f0;
-  overflow: hidden;               /* ✅ No scrolling */
+  overflow-x: hidden;       /* ✅ Allow vertical scroll */
   position: relative;
   z-index: 1;
-  min-height: 100vh;              /* Keeps height reliable */
+  min-height: 100vh;
 }
 
 /* Snowfall Overlay */
@@ -32,12 +32,7 @@ body {
   z-index: 3;
   padding: 40px;
   text-align: center;
-  margin-top: 360px; /* default desktop */
-}
-
-/* Title (Removed from HTML) */
-h1 {
-  display: none;
+  margin-top: 360px;
 }
 
 /* Profile Section */
@@ -48,12 +43,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Avatar (Removed) */
-.avatar {
-  display: none;
-}
-
-/* Info Box */
 .player-info {
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 30px;
@@ -63,7 +52,6 @@ h1 {
   width: 100%;
 }
 
-/* Player Name */
 .player-info h2 {
   text-align: center;
   font-size: 2rem;
@@ -71,7 +59,6 @@ h1 {
   color: #00ffff;
 }
 
-/* Stat Row Format */
 .stat-row {
   display: flex;
   justify-content: space-between;
@@ -79,13 +66,11 @@ h1 {
   margin: 12px 0;
 }
 
-/* Labels */
 .label {
   font-weight: bold;
   color: #fff;
 }
 
-/* Buttons */
 .button-section {
   display: flex;
   justify-content: center;
@@ -93,7 +78,6 @@ h1 {
   margin-top: 80px;
 }
 
-/* Button Styles */
 .btn {
   padding: 14px 36px;
   font-size: 1.2rem;
@@ -113,8 +97,10 @@ h1 {
   background-color: #0d7377;
 }
 
+/* === Mobile === */
 @media screen and (max-width: 768px) {
   html, body {
+    overflow-x: hidden;
     overflow-y: auto;
     height: auto;
   }
@@ -152,6 +138,3 @@ h1 {
     margin-bottom: 8px;
   }
 }
-
-
-
