@@ -6,9 +6,10 @@ body {
   background-size: cover;
   background-color: #000;
   color: #f0f0f0;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   z-index: 1;
+  min-height: 100vh; /* ensure body grows to fit content */
 }
 
 /* Snowfall Overlay */
@@ -31,7 +32,7 @@ body {
   z-index: 3;
   padding: 40px;
   text-align: center;
-  margin-top: 360px; /* default for desktop */
+  margin-top: 360px; /* default desktop */
 }
 
 /* Title (Removed from HTML) */
@@ -115,15 +116,15 @@ h1 {
 /* === Responsive Mobile Adjustments === */
 @media screen and (max-width: 768px) {
   html, body {
-    overflow-y: auto !important;  /* ✅ Enable full vertical scroll */
+    overflow-y: auto !important;
     height: auto !important;
   }
 
   .stats-container {
-    margin-top: 180px !important; /* ⬇️ Sit below profile pic */
-    padding: 20px;
+    margin-top: 300px !important;   /* ✅ Lower the full box under avatar cleanly */
     transform: scale(0.9);
-    padding-bottom: 100px; /* Extra space for scroll */
+    padding: 20px;
+    padding-bottom: 100px; /* breathing room */
   }
 
   .player-info {
