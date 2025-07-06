@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch(`https://duel-bot-backend-production.up.railway.app/userStats/${userId}`);
+    const response = await fetch(`https://duel-bot-backend-production.up.railway.app/user/${userId}`);
     if (!response.ok) throw new Error(`Server error: ${response.status}`);
 
     const data = await response.json();
