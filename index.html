@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- ✅ Prevent zoom + scroll -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>SV13 Player Stats</title>
   <link rel="stylesheet" href="styles/stats.css" />
 </head>
@@ -18,33 +18,33 @@
   <div class="stats-container">
     <div class="profile-section">
       <div class="player-info">
-        <h2>Survivor</h2>
+        <h2 id="player-name">Loading...</h2>
 
         <div class="stat-row">
           <span class="label">Coins</span>
-          <span id="coins">325</span>
+          <span id="player-coins">–</span>
         </div>
 
         <div class="stat-row">
           <span class="label">Cards Unlocked</span>
-          <span id="unlocked-cards">98 / 127</span>
+          <span id="cards-collected">–</span>
         </div>
 
         <div class="stat-row">
           <span class="label">Total Cards Owned</span>
-          <span id="total-cards">211 / 250</span>
+          <span id="cards-owned">–</span>
         </div>
 
         <div class="stat-row">
           <span class="label">W/L Ratio</span>
-          <span id="win-loss">25 / 18</span>
+          <span id="win-loss">–</span>
         </div>
       </div>
     </div>
 
     <!-- Buttons -->
     <div class="button-section">
-      <a href="#" class="btn">LEADERBOARD</a>
+      <a href="https://madv313.github.io/Stats-Leaderboard-UI/" class="btn">LEADERBOARD</a>
       <a href="https://madv313.github.io/HUB-UI/" class="btn">RETURN TO HUB</a>
     </div>
   </div>
