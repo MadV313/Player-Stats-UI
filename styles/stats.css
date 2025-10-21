@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background: url('/Player-Stats-UI-main/images/backgrounds/background_image.png') no-repeat center center fixed;
+  background: url('images/backgrounds/background_image.png') no-repeat center center fixed;
   background-size: cover;
   background-color: #000;
   color: #f0f0f0;
@@ -106,10 +106,10 @@ body {
   }
 
   .stats-container {
-  margin-top: 320px;                /* ⬅️ Increased top margin */
-  transform: scale(0.9);            /* ⬅️ Slightly larger for readability */
-  transform-origin: top center;
-}
+    margin-top: 320px;                /* ⬅️ Increased top margin */
+    transform: scale(0.9);            /* ⬅️ Slightly larger for readability */
+    transform-origin: top center;
+  }
 
   .player-info {
     max-width: 280px;
